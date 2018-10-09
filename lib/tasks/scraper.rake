@@ -25,8 +25,8 @@ namespace :scraper do
         spoiler << line.text.strip
       end
       
-      page.css('b img').each do |line|
-        url_img << line.to_s.delete("<img src=\">")
+      page.css('b.mg img').each do |line|
+        url_img << line.to_s.slice(10..-3)
       end
     end
         
