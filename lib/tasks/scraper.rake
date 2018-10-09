@@ -10,6 +10,7 @@ namespace :scraper do
     
     title = []
     spoiler = []
+    url_img = []
     
     20.times do |i|
     
@@ -23,6 +24,10 @@ namespace :scraper do
       page.css('.sh_art p').each do |line|
         spoiler << line.text.strip
       end
+      
+      page.css('b img').each do |line|
+        url_img << line.to_s.delete("<img src=\">")
+      end
     end
         
     #file << ["Заголовок", "Кратко"]
@@ -32,6 +37,10 @@ namespace :scraper do
       @post.title = title[i]
       @post.spoiler = spoiler[i]
       @post.save
+      @image = Image.new
+      @image.url = url_img[i]
+      @image.post_id = @post.id
+      @image.save
     end
   end
 
