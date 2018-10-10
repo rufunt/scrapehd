@@ -12,7 +12,7 @@ namespace :scraper do
     spoiler = []
     url_img = []
     
-    20.times do |i|
+    10.times do |i|
     
       url = "https://footballhd.ru/allnews/page/#{i+1}/"
       page = Nokogiri::HTML(open(url))
