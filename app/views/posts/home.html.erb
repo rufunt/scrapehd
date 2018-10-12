@@ -1,32 +1,20 @@
 <div class="jumbotron">
-  <div class="container">
-    <table>
-        <td>
-          <div class="col-md-10">
-            <h1>Поиск билетов</h1>
-            <h2>Билеты по ценам перевозчиков</h2>
-          </div>
-        </td>
-        <td>
-          <div class="col-md-2-offset-7">
-            <a href="//ros-bilet.ru/?ref=58272">
-            	<img src="//ros-bilet.ru/sites/all/script/partner/images/default/mod/300_250.gif" alt="Продажа электронных билетов на автобусы Рос-Билет ру" title="Продажа электронных билетов на автобусы Рос-Билет ру">
-            </a>
-          </div>
-        </td>
-    </table>
+ <div class="row">
+    <div class="col-md-5 col-md-offset-2">
+      <h1>Поиск билетов</h1>
+      <h2>Билеты по ценам перевозчиков</h2>
+    </div>
+    <div class="col-md-5">
+      <a href="//ros-bilet.ru/?ref=58272">
+      	<img src="//ros-bilet.ru/sites/all/script/partner/images/default/mod/300_250.gif" alt="Продажа электронных билетов на автобусы Рос-Билет ру" title="Продажа электронных билетов на автобусы Рос-Билет ру">
+      </a>
+    </div>
   </div>
 </div>
 
-<div class="container">
-  <div id="widget-box" class="horizontal">	
-  	<div id="caption"><div>Поиск билетов на автобус</div></div>
-  	<form action="//ros-bilet.ru/search/list" method="GET">
-  		<input type="hidden" name="ref" value="58272">
-  		<input type="text" id="edit-from" name="from">
-  		<input type="text" id="edit-to" name="to">
-  		<input type="submit" id="go" value="Найти!">
-  	</form>
-  </div>
+<div class="col-md-10 col-md-offset-2">
+  <%= render 'search' %>
 </div>
+
+
 <script src="//ros-bilet.ru/sites/all/script/frame/widget/v1/js/custom.js"></script>
