@@ -1,2 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+*, html, body {margin:0px; padding:0px; }
+body {font:13px Tahoma, Geneva, sans-serif; color:#010101; background:#fff; }	
+div, input { border-radius: px; }
+#widget-box { width: 852px; background: yellow; border: 1px solid #c1c1c1; padding: 0px 18px; }
+input { border: 1px solid #c1c1c1; height: 30px; }
+#edit-from, #edit-to { padding: 0px 10px; color: #c1c1c1;}
+#go { width: 10%; background: white; cursor: pointer;}
+
+#widget-box.horizontal { height: 70px; }
+#widget-box.horizontal #edit-from, #widget-box.horizontal #edit-to { margin-right: 3%; width: 41%; }
+#widget-box.horizontal #caption { height: 20px; }
+#widget-box.horizontal .up{ position: relative; top: -20px; }
